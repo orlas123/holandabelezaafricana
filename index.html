@@ -13,6 +13,12 @@
             background-color: #f5f5f5;
         }
 
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+        }
+
         .menu {
             background-color: #333;
             padding: 10px;
@@ -24,6 +30,15 @@
             width: 100%;
         }
 
+        @media (max-width: 768px) {
+            .menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+
         .menu a {
             color: #fff;
             text-decoration: none;
@@ -33,6 +48,13 @@
             padding: 50px;
             box-shadow: #eddcdc 0px 10px 20px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .menu a {
+                font-size: 14px;
+                padding: 10px;
+            }
         }
 
         .menu a:hover {
@@ -47,6 +69,13 @@
             border-radius: 50px;
         }
 
+        @media (max-width: 768px) {
+            .whatssap {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
         .descricao {
             text-align: center;
             font-size: 24px;
@@ -59,9 +88,12 @@
             border-radius: 5px;
         }
 
-       
-
-       
+        @media (max-width: 768px) {
+            .descricao {
+                font-size: 20px;
+                margin: 10px 0;
+            }
+        }
 
         .Homens,
         .Mulheres,
@@ -74,7 +106,16 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
-           
+        }
+
+        @media (max-width: 768px) {
+            .Homens,
+            .Mulheres,
+            .Crianças,
+            .Unhas,
+            .Maquiagem {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .Homens img,
@@ -89,6 +130,16 @@
             transition: transform 0.3s;
             cursor: pointer;
             width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .Homens img,
+            .Mulheres img,
+            .Crianças img,
+            .Unhas img,
+            .Maquiagem img {
+                height: 200px;
+            }
         }
 
         .Homens img:hover,
@@ -119,12 +170,21 @@
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .Maquiagem{
+
+        .Maquiagem {
             color: green;
             display: flex;
             flex-direction: row;
         }
-        .gps{
+
+        @media (max-width: 768px) {
+            .Maquiagem {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .gps {
             width: 90px;
             height: 40px;
             margin-left: 20px;
@@ -132,16 +192,13 @@
         }
 
         @media (max-width: 768px) {
-
-            .Homens,
-            .Mulheres,
-            .Crianças,
-            .Unhas,
-            .Maquiagem {
-                grid-template-columns: repeat(2, 1fr);
+            .gps {
+                width: 80px;
+                height: 30px;
+                margin-left: 0;
+                margin-top: 10px;
             }
         }
-      
     </style>
 </head>
 
@@ -156,8 +213,6 @@
     </nav>
 
     <h1 class="descricao">SALAO PROFISSIONAL HOLANDA</h1>
-
-
 
     <div class="Homens" id="Homens">
         <!-- Imagens do Homens -->
@@ -185,7 +240,6 @@
         <img src="imagens de salao/homens22.jpg" alt="">
         <img src="imagens de salao/homens23.jpg" alt="">
         <img src="imagens de salao/homens24.jpg" alt="">
-      
     </div>
 
     <div class="Mulheres" id="Mulheres" style="display: none;">
@@ -222,7 +276,6 @@
         <img src="imagens de salao/femia34.jpg" alt="">
         <img src="imagens de salao/femia35.jpg" alt="">
         <img src="imagens de salao/femia36.jpg" alt="">
-       
     </div>
 
     <div class="Crianças" id="Crianças" style="display: none;">
@@ -256,14 +309,11 @@
 
     <div class="Maquiagem" id="Maquiagem" style="display: none;">
         <!-- iformaçoes -->
-         <p>salao fica situado na entrada djolo 60m de estrada depois de oficina do moto </p>
-         <p class="aberto">Aberto 8:00 </p>
-         <p class="fechar">Fecha 22:00 </p>
-         <p>clique no WhatsApp para nos contatar </p>
-         <img class="gps" src="imagems/localizacao.jpg" alt="">
-         
-        
-        
+        <p>salao fica situado na entrada djolo 60m de estrada depois de oficina do moto</p>
+        <p class="aberto">Aberto 8:00</p>
+        <p class="fechar">Fecha 22:00</p>
+        <p>clique no WhatsApp para nos contatar</p>
+        <img class="gps" src="imagems/localizacao.jpg" alt="">
     </div>
 
     <div class="modal">
