@@ -11,6 +11,15 @@
             margin: 0;
             padding: 60px;
             background-color: #f5f5f5;
+            overflow-x: hidden; /* Adiciona essa linha para remover o scroll horizontal */
+            box-sizing: border-box; /* Adiciona essa linha para garantir que o padding não afete a largura total */
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+
+            }
         }
 
         .menu {
@@ -22,9 +31,15 @@
             top: 0;
             left: 0;
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
         }
 
         .menu a {
@@ -33,10 +48,16 @@
             margin: 0 10px;
             font-size: 16px;
             transition: color 0.3s;
-            padding: 50px;
+            padding: 60px;
             box-shadow: #eddcdc 0px 10px 20px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
-            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .menu a {
+                font-size: 14px;
+                padding: 20px;
+            }
         }
 
         .menu a:hover {
@@ -49,7 +70,13 @@
             margin-left: 10px;
             vertical-align: middle;
             border-radius: 50px;
-            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .whatssap {
+                width: 30px;
+                height: 30px;
+            }
         }
 
         .descricao {
@@ -62,7 +89,14 @@
             padding: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
-             display: flex;
+        }
+
+        @media (max-width: 768px) {
+            .descricao {
+                font-size: 20px;
+                margin: 10px 0;
+                width: 100%;
+            }
         }
 
         .Homens,
@@ -78,6 +112,16 @@
             margin: 0 auto;
         }
 
+        @media (max-width: 768px) {
+            .Homens,
+            .Mulheres,
+            .Crianças,
+            .Unhas,
+            .Maquiagem {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         .Homens img,
         .Mulheres img,
         .Crianças img,
@@ -90,6 +134,17 @@
             transition: transform 0.3s;
             cursor: pointer;
             width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .Homens img,
+            .Mulheres img,
+            .Crianças img,
+            .Unhas img,
+            .Maquiagem img {
+                height: 200px;
+                width: 100%;
+            }
         }
 
         .Homens img:hover,
@@ -115,8 +170,8 @@
         .modal img {
             display: block;
             margin: 10% auto;
-            max-width: 90%;
-            max-height: 90%;
+            max-width: 80%;
+            max-height: 80%;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -127,6 +182,13 @@
             flex-direction: row;
         }
 
+        @media (max-width: 768px) {
+            .Maquiagem {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
         .gps {
             width: 90px;
             height: 40px;
@@ -135,76 +197,12 @@
         }
 
         @media (max-width: 768px) {
-            .Homens,
-            .Mulheres,
-            .Crianças,
-            .Unhas,
-            .Maquiagem {
-                grid-template-columns: repeat(2, 1fr);
-                width: 100%;
-            }
-
-            .Homens img,
-            .Mulheres img,
-            .Crianças img,
-            .Unhas img,
-            .Maquiagem img {
-                height: 200px;
-            }
-
-            .menu {
-                padding: 10px;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                background-color: #333;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .menu a {
-                display: inline-block;
-                margin: 0 10px;
-                padding: 10px;
-                font-size: 14px;
-            }
-
-            .whatssap {
-                display: inline-block;
-                margin-left: 10px;
-                width: 30px;
-                height: 30px;
-            }
-
-            .descricao {
-                font-size: 20px;
-                margin: 10px 0;
-            }
-
-            .Maquiagem {
-                flex-direction: column;
-                align-items: center;
-            }
-
             .gps {
                 width: 80px;
                 height: 30px;
                 margin-left: 0;
                 margin-top: 10px;
             }
-        }
-
-          @media (max-width: 768px) {
-               body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 40px;
-            background-color: #f5f5f5;
-        }
-
-           
         }
     </style>
 </head>
@@ -216,7 +214,7 @@
         <a href="#" onclick="showGallery('Crianças')">Crianças</a>
         <a href="#" onclick="showGallery('Unhas')">Unhas</a>
         <a href="#" onclick="showGallery('Maquiagem')">Informaçoes</a>
-        <a href="https://wa.me/+245955465931"><img class="whatssap" src="imagems/whatssap3.gif" alt="WhatsApp"></a>
+        <a href="https://wa.me/+245955465931"><img class="whatssap" src="imagens de salao/whatssap3.gif" alt="WhatsApp"></a>
     </nav>
 
     <h1 class="descricao">SALAO PROFISSIONAL HOLANDA</h1>
